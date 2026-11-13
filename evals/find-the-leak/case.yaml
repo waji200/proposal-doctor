@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: find-the-leak
+expected_outcome: |
+  Claude analyses the proposal data and reports that the main problems are upstream of the
+  wording: almost every bid went in many hours after the job was posted, most went to
+  clients who opened almost no proposals or let the job expire, and several were outside
+  the profile's stated skills. It gives numbers from the data and a short operating rule
+  to follow, and says the cover letter is not the first thing to fix.
+context:
+  scaffold_script: place-files.sh

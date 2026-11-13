@@ -1,0 +1,16 @@
+{
+  "name": "waji200-plugins",
+  "description": "Claude plugins by waji200.",
+  "owner": {
+    "name": "waji200",
+    "url": "https://github.com/waji200"
+  },
+  "plugins": [
+    {
+      "name": "proposal-doctor",
+      "source": "./",
+      "description": "Find out why your Upwork proposals get no views, decide which jobs are worth the Connects, and write or review proposals that answer the client's problem in your own voice.",
+      "category": "productivity"
+    }
+  ]
+}

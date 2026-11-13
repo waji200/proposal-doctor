@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: skip-dead-job
+expected_outcome: |
+  Claude recommends skipping the job, names the concrete signals that make it a bad bid
+  (payment unverified, 0% hire rate over six jobs, 50+ proposals, three days old, seven
+  already interviewing, $50 budget against a $30/hr rate), and does not write a proposal
+  for it.
