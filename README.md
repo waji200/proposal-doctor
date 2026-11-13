@@ -67,10 +67,12 @@ python skills/proposal-doctor/scripts/funnel_audit.py my_proposals.json
 
 ## What it runs, reads and sends
 
-- The skill is instructions and checklists for Claude. It doesn't connect to Upwork or any other service.
+- The plugin has no connector, no server and no network code of its own. It collects no data and stores nothing.
+- If you've added your own Upwork connector to Claude, the skill may use it, when you ask, to read your past proposals and job posts for a diagnosis or a bid check. It submits a proposal or spends Connects through that connector only after showing you the exact text and cost and getting your yes. That data passes between Claude and Upwork under your connector; the plugin sends it nowhere else.
 - The two scripts run on your machine. They read only the files you pass them, write nothing, and make no network requests.
-- The plugin collects no data. Anything you paste stays in your conversation with Claude.
-- It never submits, boosts or spends Connects on its own. If you have an Upwork connector set up in Claude, the skill tells Claude to show you the exact proposal and cost and wait for your yes.
+- If you ask, Claude can save your proof bank as a file in your own working folder.
+
+[Privacy](PRIVACY.md) has the details.
 
 ## What it won't do
 
