@@ -72,7 +72,7 @@ python skills/proposal-doctor/scripts/funnel_audit.py my_proposals.json
 - The two scripts run on your machine. They read only the files you pass them, write nothing, and make no network requests.
 - If you ask, Claude can save your proof bank as a file in your own working folder.
 
-[Privacy](PRIVACY.md) has the details.
+Privacy: https://github.com/waji200/proposal-doctor/blob/main/PRIVACY.md
 
 ## What it won't do
 
