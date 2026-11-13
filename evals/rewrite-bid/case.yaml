@@ -6,5 +6,3 @@ expected_outcome: |
   (14 apps, Dawn, PageSpeed 28) instead of a greeting or self-introduction, uses only the
   experience the user supplied (35 to 74 on a Dawn store, screenshots, duplicate theme, 3 days),
   contains no stock or AI-flavoured phrases, and ends with one easy question for the client.
-context:
-  scaffold_script: place-files.sh

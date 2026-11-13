@@ -66,9 +66,10 @@ Follow `references/funnel-diagnosis.md`.
 1. Gather the last 20 to 40 proposals with their outcomes. If an Upwork connector is
    connected, use its read-only tools to list proposals in every status and fetch each
    one's insights; otherwise ask the user for the figures.
-2. Save the rows and run `python scripts/funnel_audit.py <file>`.
-3. Read a sample of the actual letters too, and lint a few. Numbers show where proposals
-   die; the letters show why.
+2. Run the funnel audit in `references/mechanical-checks.md` (part 2): classify each
+   proposal, compute the totals and timing buckets, and name the leaks in order.
+3. Read a sample of the actual letters too, and run the letter check (part 1) on a few.
+   Numbers show where proposals die; the letters show why.
 4. Report the biggest leak first, with the evidence, then the next. Finish with a short
    operating rule they can follow from tomorrow and a date to re-check.
 
@@ -93,15 +94,16 @@ Follow `references/writing-the-proposal.md`.
 4. Write the rest: first step and first deliverable, proof, anything they asked for, one
    easy question. 80 to 150 words by default.
 5. Write each screening answer for its own box. Answer 1 carries the hook.
-6. Save the letter (and answers) to files and run the lint with the job post:
-   `python scripts/proposal_lint.py --proposal letter.txt --job job.txt --answers answers.txt`
+6. Run the letter check in `references/mechanical-checks.md` (part 1) against the job post
+   and the screening answers.
 7. Score it against `references/fit-checklist.md` and read it against
-   `references/human-voice.md`. Fix and re-run until there are no blockers.
+   `references/human-voice.md`. Fix and check again until there are no blockers.
 8. Deliver in the output format below.
 
 ## Review
 
-1. Run the lint (with the job post if you have it).
+1. Run the letter check in `references/mechanical-checks.md` (with the job post if you
+   have it).
 2. Score the 25 lines of `references/fit-checklist.md`. Quote the sentence that earns or
    loses each low score.
 3. Go through `references/human-voice.md` sections 1 to 5 and list what is present.
@@ -150,25 +152,22 @@ Put the proposal in a plain code block or plain paragraph so it pastes without m
 - **Scores are aids.** They are heuristics for spotting problems, not predictions. Say so
   if the user treats a number as a guarantee.
 
-## Scripts
+## Mechanical checks
 
-Both are Python 3.8+ with no dependencies. If Python is not available, do the same checks by
-hand from the reference files.
+`references/mechanical-checks.md` holds the two counting procedures: the letter check
+(preview text, job terms, swap test, proof and close, stock phrases, AI vocabulary, sentence
+shapes, self-undermining lines, tracking tags, placeholders, code words and AI traps, with a
+points table for each score) and the funnel audit (classify past proposals, compute rates and
+send delays, name the biggest leak). Show the counts and the triggering words so the user can
+check them.
 
-- `scripts/proposal_lint.py` checks one letter: what the preview shows, whether the job's
-  own terms are used, generic sentences, proof and close, stock phrases, AI vocabulary,
-  sentence-shape patterns, self-undermining lines, tracking tags, placeholders, code words
-  and AI traps. `--json` for structured output. Exit code 1 means blockers.
-- `scripts/funnel_audit.py` takes a list of past proposals and reports the view and reply
-  rates, how late bids went in, how many clients never reviewed anyone, and which leak to
-  fix first.
-
-Neither is an AI detector and neither judges whether the letter is good. A clean lint means
+Neither is an AI detector and neither judges whether the letter is good. A clean check means
 the mechanical problems are gone; the checklists carry the judgment.
 
 ## Reference files
 
 - `references/how-clients-see-proposals.md` mechanics and evidence. Read first.
+- `references/mechanical-checks.md` the letter check and the funnel audit.
 - `references/job-gate.md` bid or skip.
 - `references/writing-the-proposal.md` how to build the letter, screening answers, examples.
 - `references/fit-checklist.md` 25 checks: does it answer this client's problem?

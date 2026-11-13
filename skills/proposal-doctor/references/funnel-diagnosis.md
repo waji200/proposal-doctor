@@ -20,14 +20,12 @@ list the proposals in each status (submitted, archived, declined, hired), then f
 one for its insights. Otherwise ask the freelancer to copy the figures from "My proposals"
 and each job page.
 
-Save the rows as JSON or CSV and run:
-
-    python scripts/funnel_audit.py proposals.json
+Then follow the funnel audit in `mechanical-checks.md` (part 2): classify each proposal,
+compute the totals and send-delay buckets, and name the leaks in order.
 
 Posting and sending times can be estimated from the ids alone. Upwork job and proposal ids
-are time-ordered: `(id >> 22) + 1288834974657` is the creation time in milliseconds. The
-script does this when no timestamp is given. Treat it as an estimate; a reposted job can be
-off.
+are time-ordered: `(id >> 22) + 1288834974657` is the creation time in milliseconds. Use it
+when no timestamp is given, and treat it as an estimate; a reposted job can be off.
 
 ## The four leaks
 

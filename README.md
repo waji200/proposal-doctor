@@ -30,11 +30,9 @@ skills/proposal-doctor/
     writing-the-proposal.md        building the letter and screening answers, with worked examples
     fit-checklist.md               25 checks: does it answer this client's problem?
     human-voice.md                 what reads as machine-written and what to write instead
+    mechanical-checks.md           the letter check (preview, job terms, swap test, tells) and the funnel audit
     funnel-diagnosis.md            finding where your proposals are lost
     sources.md                     every source, with its caveats
-  scripts/
-    proposal_lint.py           checks one letter (preview, job terms, swap test, stock phrases, tells)
-    funnel_audit.py            reads your past proposals and names the biggest leak
   assets/
     proof-bank-template.md     your reusable facts, so nothing gets invented
 evals/                         three test cases for claude plugin eval
@@ -53,23 +51,10 @@ Or inside a session: `/plugin marketplace add waji200/proposal-doctor`, then `/p
 
 **Claude apps (claude.ai, desktop):** once the listing is approved it will be in the Claude directory under Customize, Skills.
 
-## Using the scripts on their own
-
-Both need Python 3.8 or later and nothing else.
-
-```
-python skills/proposal-doctor/scripts/proposal_lint.py --proposal letter.txt --job job.txt
-python skills/proposal-doctor/scripts/proposal_lint.py --proposal letter.txt --job job.txt --answers answers.txt --json
-python skills/proposal-doctor/scripts/funnel_audit.py my_proposals.json
-```
-
-`funnel_audit.py` takes a JSON list or CSV of past proposals. Every field is optional; the docstring at the top of the file lists them.
-
 ## What it runs, reads and sends
 
-- The plugin has no connector, no server and no network code of its own. It collects no data and stores nothing.
+- The plugin is Markdown only: instructions, checklists and test cases. It has no code, no connector and no server of its own. It collects no data and stores nothing.
 - If you've added your own Upwork connector to Claude, the skill may use it, when you ask, to read your past proposals and job posts for a diagnosis or a bid check. It submits a proposal or spends Connects through that connector only after showing you the exact text and cost and getting your yes. That data passes between Claude and Upwork under your connector; the plugin sends it nowhere else.
-- The two scripts run on your machine. They read only the files you pass them, write nothing, and make no network requests.
 - If you ask, Claude can save your proof bank as a file in your own working folder.
 
 Privacy: https://github.com/waji200/proposal-doctor/blob/main/PRIVACY.md
@@ -78,7 +63,7 @@ Privacy: https://github.com/waji200/proposal-doctor/blob/main/PRIVACY.md
 
 - Invent experience. Every claim in a letter comes from what you tell it or from your proof bank.
 - Help disguise text you haven't read. The voice check removes generic and machine-written phrasing from a letter you stand behind. It refuses fake typos, forced slang and "I'm not an AI" lines.
-- Promise results. The scores are checklists for spotting problems, not predictions of a reply. Neither script is an AI detector.
+- Promise results. The scores are checklists for spotting problems, not predictions of a reply. The voice check is not an AI detector.
 
 ## Where the advice comes from
 

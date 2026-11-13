@@ -2,17 +2,16 @@
 
 Last updated: 13 November 2026
 
-Proposal Doctor is a Claude plugin made of instructions, checklists and two local Python scripts. This page explains what it reads, what it sends and what it keeps.
+Proposal Doctor is a Claude plugin made only of Markdown instructions and checklists. This page explains what it reads, what it sends and what it keeps.
 
 ## What the plugin collects
 
-Nothing. It has no server, no analytics, no tracking and no network code. The maintainer receives no data from anyone who uses it.
+Nothing. It contains no code, no server, no analytics and no tracking. The maintainer receives no data from anyone who uses it.
 
 ## What it reads
 
 - **What you give Claude in the conversation:** job posts, your draft proposals, screening answers and facts about your own work. Claude processes this under Anthropic's terms and privacy policy, as with any other conversation.
 - **Your own Upwork connector, if you have added one to Claude:** when you ask for a diagnosis or a bid check, the skill may have Claude read your past proposals, their outcomes and job posts through that connector. Job posts and client reviews can contain names. This data passes between Claude and Upwork under your connector and is governed by Upwork's and Anthropic's policies. The plugin doesn't copy it anywhere else.
-- **The two scripts** read only the files you pass to them, on your own machine. They write nothing and make no network requests.
 
 ## What it sends
 

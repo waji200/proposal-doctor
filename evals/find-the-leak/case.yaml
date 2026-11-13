@@ -6,5 +6,3 @@ expected_outcome: |
   clients who opened almost no proposals or let the job expire, and several were outside
   the profile's stated skills. It gives numbers from the data and a short operating rule
   to follow, and says the cover letter is not the first thing to fix.
-context:
-  scaffold_script: place-files.sh

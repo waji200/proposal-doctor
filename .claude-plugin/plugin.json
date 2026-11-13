@@ -1,8 +1,8 @@
 {
   "name": "proposal-doctor",
   "displayName": "Proposal Doctor",
-  "version": "1.0.0",
-  "description": "Find out why your Upwork proposals get no views, decide which jobs are worth the Connects, and write or review proposals that answer the client's problem in your own voice. Includes two local checker scripts.",
+  "version": "1.0.1",
+  "description": "Find out why your Upwork proposals get no views, decide which jobs are worth the Connects, and write or review proposals that answer the client's problem in your own voice.",
   "author": {
     "name": "waji200",
     "url": "https://github.com/waji200"
